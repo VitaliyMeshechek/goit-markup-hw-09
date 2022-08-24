@@ -1,0 +1,78 @@
+.benefits {
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.benefits__container {
+  @include justFlex(flex);
+}
+
+.benefits__list {
+ @extend %reset-list;
+ @include centeredFlex(flex);
+ gap: var(--indent);
+ margin: 0;
+ margin-left: auto;
+ margin-right: auto;
+
+ @media screen and (min-width: 320px) and (max-width: 479px) {
+  display: block;
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  flex-direction: column;
+}
+
+ @media screen and (min-width: 768px) {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ @media screen and (min-width: 1200px) {
+  align-items: baseline;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  }
+}
+
+.benefits__item {
+  background-color: var(--additional-bg-cl);
+  @include centeredFlex(flex);
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    min-width: 100%;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
+}
+
+.benefits__wrap {
+  @include justFlex(flex);
+ flex-direction: column;
+}
+
+.benefits__link {
+  background-color: var(--grey-bg-additional-cl);
+  @include centeredFlex(flex);
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    padding: 25px 142px;
+  }
+
+   @media screen and (min-width: 768px) {
+   padding: 25px 100px;
+   }
+}
